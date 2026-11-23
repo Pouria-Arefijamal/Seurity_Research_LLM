@@ -80,6 +80,96 @@ Annotated bibliography, focused on USENIX Security venues. Entries marked "prepr
     <https://www.usenix.org/conference/usenixsecurity26/presentation/liu-xiuming>
     *Layer-wise probing of hidden states to detect adversarial/harmful prompting before generation.*
 
+## 5G / 6G fuzzing and security
+
+Sources retrieved via the arXiv API. Venue labels follow each paper's own statement. arXiv IDs are given for direct lookup; many are preprints.
+
+### Protocol and RAN fuzzing
+
+18. **Berserker: ASN.1-based Fuzzing of Radio Resource Control Protocol for 4G and 5G.** Srinath Potnuru, Prajwol Kumar Nakarmi. arXiv 2107.01912 (WiMob 2021).
+    <https://arxiv.org/abs/2107.01912>
+    *ASN.1-derived RRC/NAS fuzzing across spec versions; found 2 unknown vulnerabilities in srsLTE (one also in openLTE).*
+
+19. **CovFUZZ: Coverage-based fuzzer for 4G&5G protocols.** Ilja Siroš, Dave Singelée, Bart Preneel. arXiv 2410.20958 (2024).
+    <https://arxiv.org/abs/2410.20958>
+    *Field-probability mutation guided by (or estimating) DUT coverage; vulnerabilities in 10 of 12 COTS devices and all srsRAN 4G instances.*
+
+20. **MulCovFuzz: A Multi-Component Coverage-Guided Greybox Fuzzer for 5G Protocol Testing.** Yu Wang, Yang Xiang, Chandra Thapa, Hajime Suzuki. arXiv 2602.21794 (2026).
+    <https://arxiv.org/abs/2602.21794>
+    *Multi-component coverage + scoring on OpenAirInterface; +5.85% branch, +7.17% line, +16% unique crashes; 3 zero-days (2 unique to it).*
+
+21. **Systematic Meets Unintended: Prior Knowledge Adaptive 5G Vulnerability Detection via Multi-Fuzzing.** Jingda Yang, Ying Wang, Yanjun Pan, Tuyen X. Tran. arXiv 2305.08039 (2023).
+    <https://arxiv.org/abs/2305.08039>
+    *LAL/SyAL/SoAL strategies by attacker knowledge; 129 RRC vulnerabilities at 0.072s average; 3 MITM vulnerabilities.*
+
+22. **Formal and Fuzzing Amplification: Targeting Vulnerability Detection in 5G and Beyond.** Jingda Yang, Ying Wang. arXiv 2307.05758 (2023).
+    <https://arxiv.org/abs/2307.05758>
+    *Formal traces seed fuzzing and vice versa; 53 vulnerabilities on 5G NSA RRC.*
+
+23. **Formal-Guided Fuzz Testing: Targeting Security Assurance from Specification to Implementation for 5G and Beyond.** Jingda Yang, Sudhanshu Arya, Ying Wang. arXiv 2307.11247 (2023).
+    <https://arxiv.org/abs/2307.11247>
+    *Hierarchical formal + fuzzing; 61 vulnerabilities on srsRAN; identifier leakage, DoS, eavesdropping, MITM despite TLS; exponential to linear search.*
+
+24. **NLP-based Cross-Layer 5G Vulnerabilities Detection via Fuzzing Generated Run-Time Profiling.** Zhuzhu Wang, Ying Wang. arXiv 2305.08226 (2023).
+    <https://arxiv.org/abs/2305.08226>
+    *Classifies fuzzing impact from LogInfo telemetry; 93.4%-95.9% accuracy; a learned oracle.*
+
+### Core network (SBA) fuzzing
+
+25. **Cross-Service Token: Finding Attacks in 5G Core Networks (FivGeeFuzz).** Anqi Chen, Riccardo Preatoni, Alessandro Brighente, Mauro Conti, Cristina Nita-Rotaru. arXiv 2509.08992 (2025).
+    <https://arxiv.org/abs/2509.08992>
+    *Grammar-based fuzzing of 3GPP SBIs on free5GC; 8 unknown vulnerabilities including the Cross-Service Token Attack; 7 patched.*
+
+### Baseband, devices, and hardware-in-the-loop
+
+26. **BaseSAFE: Baseband SAnitized Fuzzing through Emulation.** Dominik Maier, Lukas Seidel, Shinjo Park. arXiv 2005.07797 (WiSec '20).
+    <https://arxiv.org/abs/2005.07797>
+    *Rehosting + sanitizing allocator; heap OOB in MediaTek baseband; ~15k test cases/s total.*
+
+27. **ARIstoteles — Dissecting Apple's Baseband Interface.** Tobias Kröll, Stephan Kleber, Frank Kargl, Matthias Hollick, Jiska Classen. arXiv 2604.23457 (ESORICS 2021).
+    <https://arxiv.org/abs/2604.23457>
+    *Reverse-engineering + auto-generated dissector + fuzzing of the iOS ARI interface.*
+
+28. **Soft Tester UE: A Novel Approach for Open RAN Security Testing.** Joshua Moore, Aly Sabri Abdalla, Charles Ueltschey, Vuk Marojevic. arXiv 2410.09641 (IEEE VTC Fall 2024, RitiRAN Workshop).
+    <https://arxiv.org/abs/2410.09641>
+    *Software-defined test UE sending fuzzed data over Uu; lowers testbed cost.*
+
+29. **SIMulator: SIM Tracing on a (Pico-)Budget.** Gabriel K. Gegenhuber, Philipp É. Frenzel, Adrian Dabrowski. arXiv 2506.20800 (WiSec 2025 poster).
+    <https://arxiv.org/abs/2506.20800>
+    *Low-cost SIM-modem APDU tracing enabling fuzzing and key monitoring.*
+
+30. **5uGUE: Agentic Hardware-in-the-Loop Fuzzing for 5G Devices and beyond.** Guoqiang Hua, Sakshi Udeshi, Matheus Eduardo Garbelini, Daisuke Mashima, Sudipta Chattopadhyay. arXiv 2610.29155 (2026).
+    <https://arxiv.org/abs/2610.29155>
+    *LLM HIL agent on COTS 5G devices; 167 crashes vs 13 for 5GHOUL; CVE-2026-20525; extended to Bluetooth.*
+
+31. **Smart Fuzzing of 5G Wireless Software Implementation.** Huan Wu, Brian Fang, Fei Xie. arXiv 2309.12994 (2023).
+    <https://arxiv.org/abs/2309.12994>
+    *AFL++ on OpenAirInterface5G config files; LLM (Bard) interprets parameters.*
+
+### 6G and algorithmic components
+
+32. **AI-Driven Fuzzing for Vulnerability Assessment of 5G Traffic Steering Algorithms.** Seyed Bagher Hashemi Natanzi, Hossein Mohammadi, Bo Tang, Vuk Marojevic. arXiv 2601.18690 (2026).
+    <https://arxiv.org/abs/2601.18690>
+    *NSGA-II adversarial search in NVIDIA Sionna; 34.2% more vulnerabilities, 5.8% more critical failures; 6G-ready.*
+
+33. **Security and privacy for 6G: A survey on prospective technologies and challenges.** Van-Linh Nguyen, Po-Ching Lin, Bo-Chao Cheng, Ren-Hung Hwang, Ying-Dar Lin. arXiv 2108.11861 (IEEE COMST 2021).
+    <https://arxiv.org/abs/2108.11861>
+
+34. **6G White paper: Research challenges for Trust, Security and Privacy.** Mika Ylianttila et al. arXiv 2004.11665 (2020).
+    <https://arxiv.org/abs/2004.11665>
+
+35. **Zero Trust Architecture for 6G Security.** Xu Chen, Wei Feng, Ning Ge, Yan Zhang. arXiv 2203.07716 (2022).
+    <https://arxiv.org/abs/2203.07716>
+
+36. **Bridging the Security Gap: Lessons from 5G and What 6G Should Do Better.** Isabella D. Lutz, Matthew C. Valenti. arXiv 2501.11045 (2025).
+    <https://arxiv.org/abs/2501.11045>
+
+37. **Toward a Unified Security and Privacy Framework for AI-Native 6G Networks.** Bidushi Barua et al. arXiv 2607.01019 (2026).
+    <https://arxiv.org/abs/2607.01019>
+
+38. **Towards a Security Plane for 6G Ecosystems.** Xavi Masip-Bruin, Eva Rodríguez, Admela Jukan, Panos Trakadas. arXiv 2512.20733 (2025).
+    <https://arxiv.org/abs/2512.20733>
+
 ## Foundational background (non-USENIX, for context)
 
 - The halting problem and Rice's theorem — basis for undecidability of full static analysis.
