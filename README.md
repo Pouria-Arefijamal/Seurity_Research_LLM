@@ -47,6 +47,7 @@ scope -> recon -> spec mining -> reachability (SAST-like)
 | [`docs/06-playbook.md`](docs/06-playbook.md) | The full 8-stage path, prompts, commands, checklist, metrics |
 | [`docs/07-5g-6g-fuzzing.md`](docs/07-5g-6g-fuzzing.md) | 5G/6G fuzzing: attack surfaces, methods, results, and why they succeeded |
 | [`docs/08-5g-6g-method-deep-dive.md`](docs/08-5g-6g-method-deep-dive.md) | Per-method deep dive: what each does, its novelty, and a novelty tier ranking |
+| [`docs/09-gpu-llm-fuzzing.md`](docs/09-gpu-llm-fuzzing.md) | GPU-accelerated fuzzing with an LLM copilot: architecture, new ideas, roadmap |
 | [`references.md`](references.md) | Annotated bibliography with USENIX and arXiv links |
 
 ---
@@ -69,3 +70,4 @@ scope -> recon -> spec mining -> reachability (SAST-like)
 - Want the LLM-specific argument: read `04`.
 - Want the telecom (5G/6G) case study and results: read `07`.
 - Want the per-method novelty analysis: read `08`.
+- Want the GPU + LLM fuzzing roadmap and new ideas: read `09`.

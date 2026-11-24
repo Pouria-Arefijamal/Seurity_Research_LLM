@@ -170,6 +170,146 @@ Sources retrieved via the arXiv API. Venue labels follow each paper's own statem
 38. **Towards a Security Plane for 6G Ecosystems.** Xavi Masip-Bruin, Eva Rodríguez, Admela Jukan, Panos Trakadas. arXiv 2512.20733 (2025).
     <https://arxiv.org/abs/2512.20733>
 
+## GPU-accelerated and LLM-assisted fuzzing
+
+Retrieved via arXiv; venues per paper's own statement. See `docs/09-gpu-llm-fuzzing.md` for analysis.
+
+### GPU execution, targets, and oracles
+
+39. **CuEVM: Scaling Smart Contract Execution on GPUs.** Nhut-Minh Ho et al. arXiv 2611.14916 (ICDE 2027).
+    <https://arxiv.org/abs/2611.14916>
+    *GPU-native EVM; >8M ERC-20 transfers/s; CuEVM-fuzz >1M exec/s, up to 23x/4.8x over baselines.*
+
+40. **cuFuzz: Hunting CUDA Bugs at Scale.** Mohamed Tarek Ibn ziad, Christos Kozyrakis. arXiv 2603.12485 (OOPSLA 2026).
+    <https://arxiv.org/abs/2603.12485>
+    *Whole-program CUDA fuzzing, NVBit coverage, decoupled sanitizers; 43 unknown bugs (19 commercial).*
+
+41. **GPU-Fuzz: Finding Memory Errors in Deep Learning Frameworks.** Zihao Li et al. arXiv 2602.10478.
+    <https://arxiv.org/abs/2602.10478>
+    *Operator parameters as formal constraints; 13 unknown bugs across PyTorch/TensorFlow/PaddlePaddle.*
+
+42. **CuFuzz: Hardening CUDA Programs through Transformation and Fuzzing.** Saurabh Singh et al. arXiv 2601.01048.
+    <https://arxiv.org/abs/2601.01048>
+    *Compiler-runtime transforms (PREX, AXIPrune); up to 224x; 122 vulnerabilities.*
+
+43. **Challenges and Design Considerations for Finding CUDA Bugs Through GPU-Native Fuzzing.** Mingkai Li et al. arXiv 2603.05725 (HotEthics 2026).
+    <https://arxiv.org/abs/2603.05725>
+    *Faithfulness argument against CPU translation for GPU fuzzing.*
+
+44. **WarpDRF: The Unwritten Contract of GPU Warp Programming.** Zheyuan Chen et al. arXiv 2610.07541.
+    <https://arxiv.org/abs/2610.07541>
+    *Formal (Rocq) warp model, 10K conformance tests across CUDA/HIP/HLSL/Metal/SPIR-V; 3 races in llama.cpp.*
+
+45. **DarthShader: Fuzzing WebGPU Shader Translators & Compilers.** Lukas Bernhard et al. arXiv 2409.01824 (CCS 2024).
+    <https://arxiv.org/abs/2409.01824>
+    *IR + AST mutators across the shader pipeline; 39 faults, 15 CVEs in Chrome/Firefox/Safari.*
+
+46. **IcFuzz: Fuzzing Isaac Sim with Semantic Stage Guidance and Multi-level Mutation.** Zhixiang Chen et al. arXiv 2608.06088 (ASE 2026).
+    <https://arxiv.org/abs/2608.06088>
+    *LLM stage segmentation + bandit scheduler; 11 bugs, 9 confirmed/fixed.*
+
+47. **Revisiting Neural Program Smoothing for Fuzzing.** Maria-Irina Nicolae, Max Eisele, Andreas Zeller. arXiv 2309.16618 (FSE 2023).
+    <https://arxiv.org/abs/2309.16618>
+    *NPS fuzzers underperform greybox; MLFuzz GPU platform for ML-fuzzing evaluation.*
+
+48. **The Correctness Illusion in LLM-Generated GPU Kernels.** Dipankar Sarkar. arXiv 2606.20128.
+    <https://arxiv.org/abs/2606.20128>
+    *Allclose-on-one-shape oracle certifies buggy kernels; seeded differential fuzzing catches 10/10.*
+
+49. **Measuring the Checker: Mutation Analysis for GPU-Kernel Benchmark Oracles.** Mingzhe Du et al. arXiv 2609.22220.
+    <https://arxiv.org/abs/2609.22220>
+    *Official KernelBench oracle misses 16.9% of witnessed faults (78.6% of precision faults); KernelBench-M released.*
+
+50. **From Formal Methods to Fuzzing and Back.** Alastair F. Donaldson. arXiv 2611.12338.
+    <https://arxiv.org/abs/2611.12338>
+    *GPUVerify/GraphicsFuzz lineage; oracle problem links fuzzing and formal methods; Keystone.*
+
+### GPU symbolic execution
+
+51. **Large Language Model Powered Symbolic Execution (AutoBug).** Yihe Li, Ruijie Meng, Gregory J. Duck. arXiv 2505.13452 (OOPSLA 2025).
+    <https://arxiv.org/abs/2505.13452>
+    *Path-decomposed LLM symbolic execution; language-agnostic; consumer hardware.*
+
+52. **M2K: Making the Model-Kernel Interface Explicit for Reliable CUDA Kernel Verification.** Mengting He et al. arXiv 2603.24595.
+    <https://arxiv.org/abs/2603.24595>
+    *cuKLEE symbolic execution on CUDA; 181 unknown bugs, 9 false positives.*
+
+### LLM-assisted fuzzing
+
+53. **KernelGPT.** Chenyuan Yang, Zijie Zhao, Lingming Zhang. arXiv 2401.00563 (ASPLOS 2025).
+    <https://arxiv.org/abs/2401.00563>
+    *LLM synthesizes syscall specs; 24 kernel bugs; specs merged into Syzkaller.*
+
+54. **SeedMind.** Wenxuan Shi et al. arXiv 2411.18143.
+    <https://arxiv.org/abs/2411.18143>
+    *LLM generates test-case generators, not just cases.*
+
+55. **HGFuzzer.** Hanxiang Xu, Yanjie Zhao, Haoyu Wang. arXiv 2505.03425.
+    <https://arxiv.org/abs/2505.03425>
+    *LLM-directed greybox; 17/20 triggered, 9 new CVEs.*
+
+56. **Fuzz4All.** Chunqiu Steven Xia et al. arXiv 2308.04748 (ICSE 2024).
+    <https://arxiv.org/abs/2308.04748>
+    *Universal LLM fuzzing across six languages; 98 bugs, 64 confirmed.*
+
+57. **TitanFuzz.** Yinlin Deng et al. arXiv 2212.14834 (ISSTA 2023).
+    <https://arxiv.org/abs/2212.14834>
+    *Zero-shot LLM fuzzing of DL libraries; 65 bugs, 41 confirmed.*
+
+58. **HyllFuzz: Large Language Model assisted Hybrid Fuzzing.** Ruijie Meng, Gregory J. Duck, Abhik Roychoudhury. arXiv 2412.15931.
+    <https://arxiv.org/abs/2412.15931>
+    *LLM as solver in hybrid concolic; 31-59% more branches; 7 new bugs.*
+
+59. **LLAMAFUZZ.** Hongxiang Zhang et al. arXiv 2406.07714.
+    <https://arxiv.org/abs/2406.07714>
+    *LLM-enhanced greybox; +41 bugs over top competitor.*
+
+60. **FuzzCoder.** Liqun Yang et al. arXiv 2409.01944.
+    <https://arxiv.org/abs/2409.01944>
+    *Fine-tuned LLM byte-level mutation.*
+
+61. **ReFuzzer.** Iti Shree, Karine Even-Mendoza, Tomasz Radzik. arXiv 2508.03603.
+    <https://arxiv.org/abs/2508.03603>
+    *Feedback loop raises LLVM test validity from ~48% to ~97%.*
+
+62. **RandLuzz: Fuzzing: Randomness? Reasoning!** Xiaotao Feng et al. arXiv 2507.22065.
+    <https://arxiv.org/abs/2507.22065>
+    *LLM-generated reachable seeds and bug-specific mutators; up to 4.8x seed speedup.*
+
+63. **ProphetFuzz.** Dawei Wang et al. arXiv 2409.00922.
+    <https://arxiv.org/abs/2409.00922>
+    *LLM predicts high-risk option combinations; 21 CVEs.*
+
+64. **SaFliTe: Fuzzing Autonomous Systems via Large Language Models.** Taohong Zhu et al. arXiv 2412.18727.
+    <https://arxiv.org/abs/2412.18727>
+    *LLM predictor for safety-relevant test cases in UAV fuzzing.*
+
+65. **LLM4Fuzz.** Chaofan Shou et al. arXiv 2401.11108.
+    <https://arxiv.org/abs/2401.11108>
+    *LLM-guided smart-contract fuzzing; 5 critical vulnerabilities.*
+
+66. **On the Challenges of Fuzzing Techniques via Large Language Models.** Linghan Huang et al. arXiv 2402.00350.
+    <https://arxiv.org/abs/2402.00350>
+    *Survey of LLM + fuzzing.*
+
+### Deep-learning compiler fuzzing (oracle background)
+
+67. **NNSmith.** Jiawei Liu et al. arXiv 2207.13066 (ASPLOS 2023).
+    <https://arxiv.org/abs/2207.13066>
+    *Valid DNN test models + gradient-based input search + differential testing; 72 bugs.*
+
+68. **HirGen.** Haoyang Ma et al. arXiv 2208.02193 (ISSTA 2023).
+    <https://arxiv.org/abs/2208.02193>
+    *High-level IR testing; 21 bugs at TVM.*
+
+69. **TorchProbe.** Qidong Su et al. arXiv 2310.20078.
+    <https://arxiv.org/abs/2310.20078>
+    *Dynamic-feature transformations for PyTorch/Triton; 20 bugs.*
+
+70. **DESIL.** Chenyao Suo et al. arXiv 2504.01379.
+    <https://arxiv.org/abs/2504.01379>
+    *Silent MLIR bugs; 23 silent + 19 crash bugs.*
+
 ## Foundational background (non-USENIX, for context)
 
 - The halting problem and Rice's theorem — basis for undecidability of full static analysis.
