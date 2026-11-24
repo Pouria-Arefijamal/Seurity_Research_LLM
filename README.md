@@ -46,6 +46,7 @@ scope -> recon -> spec mining -> reachability (SAST-like)
 | [`docs/05-worked-examples.md`](docs/05-worked-examples.md) | Three end-to-end cases: login, calculator, PHP deserialization to RCE |
 | [`docs/06-playbook.md`](docs/06-playbook.md) | The full 8-stage path, prompts, commands, checklist, metrics |
 | [`docs/07-5g-6g-fuzzing.md`](docs/07-5g-6g-fuzzing.md) | 5G/6G fuzzing: attack surfaces, methods, results, and why they succeeded |
+| [`docs/08-5g-6g-method-deep-dive.md`](docs/08-5g-6g-method-deep-dive.md) | Per-method deep dive: what each does, its novelty, and a novelty tier ranking |
 | [`references.md`](references.md) | Annotated bibliography with USENIX and arXiv links |
 
 ---
@@ -67,3 +68,4 @@ scope -> recon -> spec mining -> reachability (SAST-like)
 - Want to run it: go straight to `06-playbook.md`, then skim `05`.
 - Want the LLM-specific argument: read `04`.
 - Want the telecom (5G/6G) case study and results: read `07`.
+- Want the per-method novelty analysis: read `08`.
